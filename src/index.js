@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import Search from './components/Serach/Search';
+import Search from './components/Search/Search';
 
 import * as serviceWorker from './serviceWorker';
 
