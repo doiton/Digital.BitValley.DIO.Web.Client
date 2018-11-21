@@ -1,36 +1,234 @@
-input[type=text], select, textarea {
-    width: 99%;
-    padding: 12px;
+
+.search-component-container{
+    display: grid;
+    grid-template-columns: 88% 1%;
+   }
+.search-component-item {
+  text-align: left;
+  padding: 6px 6px;
+}
+
+.search-component-input {
+    display: block;
+    width: 97%;
+    height: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
-    resize: vertical;
-}
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+  .search-component-input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+  }
+  .search-component-input::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  .search-component-input:-ms-input-placeholder {
+    color: #999;
+  }
+  .search-component-input::-webkit-input-placeholder {
+    color: #999;
+  }
+  .search-component-input::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+  .search-component-input[disabled],
+  .search-component-input[readonly],
+  fieldset[disabled] .search-component-input {
+    background-color: #eee;
+    opacity: 1;
+  }
+  .search-component-input[disabled],
+  fieldset[disabled] .search-component-input {
+    cursor: not-allowed;
+  }
+  textarea.search-component-input {
+    height: auto;
+  }
 
-
-
-input[type=submit] {
-    background-color: #ffffff;
-    color: #1e90ff;
-    padding: 12px 20px;
-    border: 1px solid #1e90ff;
-    border-radius: 4px;
+  .search-component-button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
     cursor: pointer;
-    float: right;
-    
-}
-
-input[type=submit]:hover {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .search-component-button:focus,
+  .search-component-button:active:focus,
+  .search-component-button.active:focus,
+  .search-component-button.focus,
+  .search-component-button:active.focus,
+  .search-component-button.active.focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  .search-component-button:hover,
+  .search-component-button:focus,
+  .search-component-button.focus {
+    color: #333;
+    text-decoration: none;
+  }
+  .search-component-button:active,
+  .search-component-button.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }
+  .search-component-button.disabled,
+  .search-component-button[disabled],
+  fieldset[disabled] .search-component-button {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: .65;
+  }
+  a.search-component-button.disabled,
+  fieldset[disabled] a.search-component-button {
+    pointer-events: none;
+  }
+  .search-component-button-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+  .search-component-button-default:focus,
+  .search-component-button-default.focus {
+    color: #fff;
     background-color: #1e90ff;
-    color: #ffffff;
-}
+    border-color: #8c8c8c;
+  }
+  .search-component-button-default:hover {
+    color: #fff;
+    background-color: #1e90ff;
+    border-color: #adadad;
+  }
+ 
 
+  
 
-
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-   input[type=input] {
-        width: 100%;
-        margin-top: 0;
+@media (min-width: 320px)and (max-width: 419px) {
+   
+    .search-component-container{
+        display: grid;
+        grid-template-columns: 80% 20%;
+       }
+    .search-component-item {
+      text-align: left;
+      padding: 0px 0px;
     }
-}
+    .search-component-input {
+        display: block;
+        width: 88%;
+        height: 20px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .search-component-button{
+        padding: 6px 12px;
+        
+    }
+    }
+    @media (min-width: 420px)and (max-width: 767px) {
+   
+        .search-component-container{
+            display: grid;
+            grid-template-columns: 94% 20%;
+           }
+        .search-component-item {
+          text-align: left;
+          padding: 0px 0px;
+        }
+        .search-component-input {
+            display: block;
+            width: 95%;
+            height: 20px;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+        
+        .search-component-button{
+            padding: 6px 12px;
+            
+        }
+        }
+
+    @media (min-width: 768px)and (max-width: 1024px) {
+   
+        .search-component-container{
+            display: grid;
+            grid-template-columns: 90% 10%;
+           }
+        .search-component-item {
+          text-align: left;
+          padding: 0px 0px;
+        }
+        .search-component-input {
+            display: block;
+            width: 96%;
+            height: 20px;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+        
+        .search-component-button{
+            padding: 6px 12px;
+            
+        }
+        }
+    
+        @media (min-width: 1366px) {
+   
+            .search-component-container{
+                display: grid;
+                grid-template-columns: 95% 5%;
+               }
+            .search-component-item {
+              text-align: left;
+              padding: 0px 0px;
+            }
+            .search-component-input {
+                display: block;
+                width: 98%;
+                height: 20px;
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            
+            .search-component-button{
+                padding: 6px 12px;
+                
+            }
+            }
+        
+            

@@ -6,7 +6,7 @@ import Search from './components/Search/Search';
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Search/>, document.getElementById('root'));
+ReactDOM.render(<Search buttonName="Search" placeholder="Search"/>, document.getElementById('root'));
 
 
 

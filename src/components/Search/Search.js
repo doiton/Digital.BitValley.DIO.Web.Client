@@ -6,16 +6,15 @@ class Search extends Component{
     render(){
         return(
          
-  
-                <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search" />
-                    <span class="input-group-addon">
-                     <input type="submit" name="asda"/>
-                    </span>
-                </div>
-
-     
-
+  <section className="search-component-container"> 
+                <div className="item1" >
+                    <input type="text" className="search-component-input"  placeholder={this.props.placeholder} />
+                 </div>   
+                 <div className="search-component-item" >
+                    <button type="submit" className="search-component-button search-component-button-default">{this.props.buttonName}</button>
+                    </div>
+                
+                </section>
         );
     }
 }
