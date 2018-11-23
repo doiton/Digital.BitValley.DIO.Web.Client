@@ -7,7 +7,7 @@ class Search extends Component {
         return (
 
             <section className="search-component-container">
-                <div className="item1" >
+                <div className="search-component-item" >
                     <input type="text" className="search-component-input" placeholder={this.props.placeholder} />
                 </div>
                 <div className="search-component-item" >
