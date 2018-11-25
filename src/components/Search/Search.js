@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import './Search.css';
-
+import { Container, Item, Input, Button } from './Style';
 
 class Search extends Component {
     render() {
         return (
-
-            <section className="search-component-container">
-                <div className="search-component-item" >
-                    <input type="text" className="search-component-input" placeholder={this.props.placeholder} />
-                </div>
-                <div className="search-component-item" >
-                    <button type="submit" className="search-component-button search-component-button-default">{this.props.buttonName}</button>
-                </div>
-
-            </section>
+            <Container>
+                <Item>
+                    <Input  type="text" placeholder={this.props.placeholder} />
+                </Item>
+                <Item>
+                    <Button>{this.props.buttonName}</Button>
+                </Item>
+            </Container>
         );
     }
 }

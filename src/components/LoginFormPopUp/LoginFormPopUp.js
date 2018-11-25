@@ -1,45 +1,38 @@
-import React, {Component} from 'react';
-import 'LoginFormPopUp.css';
+import React, { Component } from 'react';
+import './LoginFormPopUp.css';
+import styled from 'styled-components';
 
-class LoginFormPopUp extends Component{
-    render(){
-        return(
-            <div>
-                <h2>{this.props.title}}</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action={this.props.action} method={this.props.method}>
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar"/>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required/>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required/>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"/> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-            </div>
-        )
-    }
+class LoginFormPopUp extends Component {
+  render() {
+    return (
+      <div>
+        <a href="#openModal">Open Modal</a>
+        <div id="openModal" className="modalDialog">
+          <div>
+            <a href="#close" title="Close" className="close">X</a>
+            <form action={this.props.action}>
+              <div className="imgcontainer">
+                <img src={this.props.imgurl} alt="Login" class="avatar" />
+              </div>
+              <div className="container">
+               
+                <input type="text" className="login-component-input" placeholder="Enter Username" name="uname" required />
+                <br/>
+                <input type="password" className="login-component-input" placeholder="Enter Password" name="psw" required />
+                <br />
+                <button className="login-component-button" type="submit">Login</button>
+              </div>
+              <div class="container" >
+                <span class="psw">Forgot <a href="#a">password?</a></span>
+                <br /><br />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default LoginFormPopUp;
